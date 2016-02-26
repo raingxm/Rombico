@@ -17,7 +17,7 @@ public class Student {
         return name;
     }
 
-    public static Student find(Student[] students, StudentPredicate p) {
+    public static Student find(Iterable<Student> students, StudentPredicate p) {
         for(Student s : students) {
             if(p.test(s)) {
                 return s;
