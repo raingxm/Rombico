@@ -1,7 +1,5 @@
 package com.raingxm.rombico;
 
-import javax.sound.midi.Sequencer;
-
 public class Student {
     private int age;
     private String name;
