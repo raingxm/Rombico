@@ -17,23 +17,12 @@ public class Student {
         return name;
     }
 
-    public static Student findByAge(Student[] students) {
+    public static Student find(Student[] students, StudentPredicate p) {
         for(Student s : students) {
-            if(s.getAge() == 17) {
+            if(p.test(s)) {
                 return s;
             }
         }
-
-        return null;
-    }
-
-    public static Student findByName(Student[] students) {
-        for(Student s : students) {
-            if(s.getName().equals("zhangxu")) {
-                return s;
-            }
-        }
-
         return null;
     }
 

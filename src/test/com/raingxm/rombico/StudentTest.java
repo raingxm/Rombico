@@ -19,11 +19,11 @@ public class StudentTest {
 
     @Test
     public void shouldFindStudentByAge() throws Exception {
-        assertThat(Student.findByAge(students), notNullValue());
+        assertThat(Student.find(students, new AgePredicate(17)), notNullValue());
     }
 
     @Test
     public void shouldFindStudentByName() throws Exception {
-        assertThat(Student.findByName(students), notNullValue());
+        assertThat(Student.find(students, new NamePredicate("zhangxu")), notNullValue());
     }
 }
