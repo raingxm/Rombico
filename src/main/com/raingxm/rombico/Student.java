@@ -20,9 +20,9 @@ public class Student {
     }
 
     public static Student findByAge(Student[] students) {
-        for (int i = 0; i < students.length; i++) {
-            if (students[i].getAge() == 17) {
-                return students[i];
+        for(Student s : students) {
+            if(s.getAge() == 17) {
+                return s;
             }
         }
 
@@ -30,9 +30,9 @@ public class Student {
     }
 
     public static Student findByName(Student[] students) {
-        for (int i = 0; i < students.length; i++) {
-            if (students[i].getName().equals("zhangxu")) {
-                return students[i];
+        for(Student s : students) {
+            if(s.getName().equals("zhangxu")) {
+                return s;
             }
         }
 
